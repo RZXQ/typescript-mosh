@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/typescript-mosh.iml" filepath="$PROJECT_DIR$/typescript-mosh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/typescript-mosh.iml" filepath="$PROJECT_DIR$/.idea/typescript-mosh.iml" />
     </modules>
   </component>
 </project>
