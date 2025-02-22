@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baab18ae-26a2-4fe6-a164-07ccf75540e2" name="Changes" comment="Add examples for TypeScript fundamentals&#10;&#10;Introduced TypeScript examples covering built-in types, arrays, tuples, enums, functions, and objects. These examples highlight key concepts such as type inference, `any` avoidance, tuple constraints, enum usage, default function parameters, and readonly object properties. Each file demonstrates concise usage and best practices for learning foundational TypeScript principles.">
-      <change afterPath="$PROJECT_DIR$/src/02- Getting Started with TypeScript/4- Your First TypeScript Program/4- Your First TypeScript Program.ts" afterDir="false" />
+    <list default="true" id="baab18ae-26a2-4fe6-a164-07ccf75540e2" name="Changes" comment="Refactor type examples and update variable naming&#10;&#10;Adjusted comments for clarity on TypeScript type inference. Renamed variables for better readability and consistency with naming conventions.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/02- Getting Started with TypeScript/4- Your First TypeScript Program/4- Your First TypeScript Program.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/2- Built-in Types/2- Built-in Types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/2- Built-in Types/2- Built-in Types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/3- The any Type/3- The any Type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/3- The any Type/3- The any Type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/5- Arrays/5- Arrays.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/5- Arrays/5- Arrays.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/6- Tuples/6- Tuples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/6- Tuples/6- Tuples.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/7- Enums/7- Enums.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/7- Enums/7- Enums.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/8- Functions/8- Functions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/03- Fundamentals/9- Objects/9- Objects.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740154501018</updated>
       <workItem from="1740154502060" duration="471000" />
-      <workItem from="1740242142129" duration="310000" />
+      <workItem from="1740242142129" duration="1507000" />
     </task>
     <task id="LOCAL-00001" summary="Simplify project structure and setup TypeScript.&#10;&#10;Removed unnecessary `.idea` config files and cleaned up `.gitignore` to streamline version control. Added a minimal TypeScript setup with a starter script, updated dependencies, and refined configuration in `tsconfig.json`.">
       <option name="closed" value="true" />
@@ -97,7 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740154756843</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="**Add examples for TypeScript fundamentals**&#10;&#10;Added foundational TypeScript examples, including types, arrays, tuples, enums, functions, and objects. The examples emphasize key concepts such as type inference, avoiding `any`, tuple constraints, enum usage, default parameters, and immutability with `readonly`. These serve as a clear introduction to essential TypeScript practices.">
+      <option name="closed" value="true" />
+      <created>1740242472155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740242472155</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactor type examples and update variable naming&#10;&#10;Adjusted comments for clarity on TypeScript type inference. Renamed variables for better readability and consistency with naming conventions.">
+      <option name="closed" value="true" />
+      <created>1740243511795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740243511795</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +149,8 @@
     <MESSAGE value="Remove redundant files and refactor project structure&#10;&#10;Deleted unused educational TypeScript and JS files to streamline the codebase. Clean. Simplified the project by focusing on a minimal TypeScript setup with improved organization." />
     <MESSAGE value="Add fundamental TypeScript examples for types, arrays, tuples, enums, functions, and objects&#10;&#10;Introduced examples for built-in types, emphasizing TypeScript's type inference and safety features. Covered key concepts like avoiding `any`, tuple limitations, enum optimizations, function default values, and object immutability using `readonly`. These examples aim to provide a clear foundation in TypeScript basics." />
     <MESSAGE value="Add examples for TypeScript fundamentals&#10;&#10;Introduced TypeScript examples covering built-in types, arrays, tuples, enums, functions, and objects. These examples highlight key concepts such as type inference, `any` avoidance, tuple constraints, enum usage, default function parameters, and readonly object properties. Each file demonstrates concise usage and best practices for learning foundational TypeScript principles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add examples for TypeScript fundamentals&#10;&#10;Introduced TypeScript examples covering built-in types, arrays, tuples, enums, functions, and objects. These examples highlight key concepts such as type inference, `any` avoidance, tuple constraints, enum usage, default function parameters, and readonly object properties. Each file demonstrates concise usage and best practices for learning foundational TypeScript principles." />
+    <MESSAGE value="**Add examples for TypeScript fundamentals**&#10;&#10;Added foundational TypeScript examples, including types, arrays, tuples, enums, functions, and objects. The examples emphasize key concepts such as type inference, avoiding `any`, tuple constraints, enum usage, default parameters, and immutability with `readonly`. These serve as a clear introduction to essential TypeScript practices." />
+    <MESSAGE value="Refactor type examples and update variable naming&#10;&#10;Adjusted comments for clarity on TypeScript type inference. Renamed variables for better readability and consistency with naming conventions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor type examples and update variable naming&#10;&#10;Adjusted comments for clarity on TypeScript type inference. Renamed variables for better readability and consistency with naming conventions." />
   </component>
 </project>

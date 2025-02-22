@@ -10,3 +10,5 @@ yarn-error.log*
 *.mp4
 *.pdf
 .vscode/*
+!/.idea/
+.idea/*
