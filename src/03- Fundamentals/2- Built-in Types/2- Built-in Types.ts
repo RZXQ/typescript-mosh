@@ -1,18 +1,17 @@
 // ===========================================================
-//                 JavaScript vs TypeScript Types
+//              JavaScript vs TypeScript Types
 // ===========================================================
 // |   JavaScript Types   |   TypeScript Types               |
 // |-----------------------|----------------------------------|
-// | number               | any                              |
-// | string               | unknown                          |
+// | number               | unknown                          |
+// | string               | any                              |
 // | boolean              | never                            |
 // | null                 | enum                             |
 // | undefined            | tuple                            |
 // | object               |                                  |
 // ===========================================================
 
-// We don't always need to annotate variables. TypeScript compiler can infer the type based on the value.
-
-let sales = 123_456_789;
-let course = "TypeScript";
-let is_published: boolean = true;
+// TypeScript infers variable types based on the assigned value.
+let totalSales = 123_456_789;
+let courseName = "TypeScript";
+let isPublished: boolean = true;
