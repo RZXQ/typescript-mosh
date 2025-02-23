@@ -1,13 +1,19 @@
 // ===========================================================
-//            1. Using `const` for Optimized Code
+//         1. Using `const` and `const enum` for Efficiency
+// - `const` variables cannot be reassigned, helping the compiler
+//   optimize the code and ensuring immutability.
+// - `const enum` in TypeScript is fully inlined at compile time,
+//   making the resulting JavaScript smaller and more performant.
+//   However, you lose the ability to reference the enum object
+//   at runtime (no runtime reflection).
 // ===========================================================
-// Using `const` can generate optimized code by preventing reassignment
-// and ensuring that the value remains constant.
 
-enum Size {
+const small = 1;
+
+const enum Size {
   Small = 1,
   Medium,
-  Large,
+  Large
 }
 
 let mySize: Size = Size.Medium;
