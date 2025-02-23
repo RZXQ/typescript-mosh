@@ -9,9 +9,11 @@
 // }
 
 // ===========================================================
-//               Approach B: Using Default Value
+//         Approach B: Using Default Parameters (Recommended)
 // ===========================================================
-function calculateTax(income: number, taxYear = 2022): number {
+function calculateTax(income: number, taxYear: number = 2022): number {
+  // When no taxYear is provided, it defaults to 2022.
+  // This approach avoids issues with falsy values and enhances code clarity.
   if (taxYear < 2022) {
     return income * 1.2;
   }
