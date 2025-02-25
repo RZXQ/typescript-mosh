@@ -1,22 +1,16 @@
 // ===========================================================
-//               Using Semicolons in Type Declarations
+//                      Optional and Readonly Modifiers
 // ===========================================================
-// let employee: { id: number; name: string }; // Using semicolons
-// let employee: { id: number, name: string }; // Using commas
-// Semicolons are commonly used in type declarations for readability and consistency.
-// Commas are more natural in actual object literals or JavaScript structures.
 
-// ===========================================================
-//                 Using Readonly Modifier
-// ===========================================================
 let employee: {
-  readonly id: number; // id is immutable
-  name: string; // name is mutable
-  retire: (date: Date) => void; // retire is a function accepting a Date
+    readonly id: number;           // readonly modifier, ensures 'id' can't be modified
+    name?: string;                 // name is optional
+    retire: (date: Date) => void;  // retire function signature
 } = {
-  id: 1,
-  name: "Reacher",
-  retire: (date: Date) => {
-    console.log(date);
-  },
+    id: 1,
+    retire: (date: Date) => console.log(date),
 };
+
+employee.name = "Reacher";         // Optional property can be set
+employee.retire(new Date());      // Calling the retire function
+console.log(employee);            // Output the employee object
