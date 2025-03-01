@@ -1,4 +1,3 @@
-//
 class Account {
   id: number;
   owner: string;
@@ -10,10 +9,10 @@ class Account {
     this.balance = balance;
   }
 
-  deposit(amount: number):void {
-     if(amount <= 0) {throw new Error("Invalid amount")} 
-     this.balance += amount;
+  deposit(amount: number): void {
+    if (amount <= 0) {
+      throw new Error("Invalid amount");
+    }
+    this.balance += amount;
   }
 }
-
-
