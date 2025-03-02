@@ -16,13 +16,13 @@ class Account {
   constructor(id: number, owner: string, balance: number, nickname?: string) {
     this.id = id;
     this.owner = owner;
-    this.balance = balance;
+    this._balance = balance;
     this.nickname = nickname;
   }
 
   deposit(money: number) {
     if (money <= 0) throw new Error("Invalid amount");
-    this.balance += money;
+    this._balance += money;
   }
 }
 
