@@ -7,8 +7,8 @@
 class Ride {
   private static _activeRides: number = 0;
 
-  // Getter to access the active rides count.
-  get activeRides() {
+  // Static getter to access the active rides count directly from the class.
+  static get activeRides() {
     return Ride._activeRides;
   }
 
@@ -22,13 +22,10 @@ class Ride {
 //                     Demonstration Code
 // ===========================================================
 
-// Direct modification demo (not recommended in practice)
-Ride._activeRides = 10;
-
 let firstRide = new Ride();
 firstRide.start();
 
 let secondRide = new Ride();
 secondRide.start();
 
-console.log(Ride.activeRides);
+console.log(Ride.activeRides); // Outputs: 2
