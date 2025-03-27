@@ -1,3 +1,5 @@
+export = {};
+
 // ===========================================================
 //         1. Using `const` and `const enum` for Efficiency
 // - `const` variables cannot be reassigned, helping the compiler
@@ -7,13 +9,14 @@
 //   However, you lose the ability to reference the enum object
 //   at runtime (no runtime reflection).
 // ===========================================================
+export {};
 
 const small = 1;
 
 const enum Size {
   Small = 1,
   Medium,
-  Large
+  Large,
 }
 
 let mySize: Size = Size.Medium;
