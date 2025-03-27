@@ -26,3 +26,5 @@ arr[1] = "Hello"; // allowed, but reduces type safety
 // Here, IntelliSense accurately identifies `n` as a `number`,
 // allowing consistent and relevant method completion.
 numbers.forEach((n) => n.toPrecision(3));
+
+export = {};
