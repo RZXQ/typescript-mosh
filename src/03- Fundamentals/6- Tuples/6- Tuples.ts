@@ -42,5 +42,8 @@ console.log(user); // Outputs: [1, "Reacher", 1] - length unexpectedly changed!
 // To enforce immutability and prevent accidental mutations at
 // compile-time, use the `readonly` modifier explicitly.
 // ===========================================================
-const safeUser: readonly [number, string] = [2, "Finley"];
+const safeUser: readonly [number, string] = [1, "Finley"]; // you can use let if you want, but:
+// Using const means it doesn't allow reassignment to another object:
+// safeUser = [2, "Finley"];
+
 // safeUser.push(3);  // Compile-time error now - mutation prevented
