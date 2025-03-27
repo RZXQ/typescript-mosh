@@ -1,16 +1,22 @@
-// // ===========================================================
-// //                      Optional and Readonly Modifiers
-// // ===========================================================
-//
-// let employee: {
-//     readonly id: number;           // readonly modifier, ensures 'id' can't be modified
-//     name?: string;                 // name is optional
-//     retire: (date: Date) => void;  // retire function signature
-// } = {
-//     id: 1,
-//     retire: (date: Date) => console.log(date),
-// };
-//
-// employee.name = "Reacher";         // Optional property can be set
-// employee.retire(new Date());      // Calling the retire function
-// console.log(employee);            // Output the employee object
+// ===========================================================
+//              Optional and Readonly Modifiers
+// ===========================================================
+
+// Define an interface for the Employee type
+interface Employee {
+  readonly id: number; // readonly modifier: 'id' cannot be modified after initialization
+  name?: string; // Optional property: 'name' can be omitted
+  retire: (date: Date) => void; // Function signature: takes a Date and returns void
+}
+
+// Create an employee object that adheres to the Employee interface
+const employee: Employee = {
+  id: 1,
+  retire: (date) => console.log(date), // No need to specify `date: Date` due to contextual typing
+};
+
+employee.name = "Reacher";
+employee.retire(new Date());
+console.log(employee);
+
+export {};
