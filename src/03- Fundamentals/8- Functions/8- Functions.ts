@@ -21,3 +21,5 @@ function calculateTax(income: number, taxYear: number = 2022): number {
 }
 
 console.log(calculateTax(100000));
+
+export = {};
