@@ -11,7 +11,8 @@ type Resizable = { resize: () => void };
 // ===========================================================
 // Intersection type combines multiple types into one. In this case, UIWidget
 // must have both drag and resize methods to satisfy both Draggable & Resizable.
-
+//
+// & is called: ampersand
 type UIWidget = Draggable & Resizable;
 
 // ===========================================================
@@ -25,3 +26,5 @@ let textBox: UIWidget = {
 };
 
 console.log(textBox);
+
+export = {};
