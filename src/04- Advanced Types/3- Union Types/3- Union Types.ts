@@ -18,3 +18,5 @@ function kgToLbs(weight: number | string): number {
 
 console.log(kgToLbs(10));
 console.log(kgToLbs("10kg"));
+
+export = {};
