@@ -16,3 +16,5 @@ function greet(name: string | null | undefined): void {
 
 greet(null); // Does not call toUpperCase, just prints "Hola!"
 greet(undefined); // Does not call toUpperCase, just prints "Hola!"
+
+export = {};
