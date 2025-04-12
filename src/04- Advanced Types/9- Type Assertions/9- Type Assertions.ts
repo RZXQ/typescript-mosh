@@ -11,3 +11,5 @@
 let phone = document.getElementById("phone") as HTMLInputElement;
 
 console.log(phone.value); // Accessing the `value` property, which exists only on `HTMLInputElement`
+
+export = {};
