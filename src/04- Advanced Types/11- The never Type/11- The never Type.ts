@@ -30,3 +30,5 @@ function reject(message: string): never {
 
 reject("...");
 console.log("Hello World"); // ❌ Unreachable code (never executed)
+
+export = {};
