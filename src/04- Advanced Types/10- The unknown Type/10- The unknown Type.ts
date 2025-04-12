@@ -37,3 +37,5 @@ function render(document: unknown) {
   document.fly();
   document.whateverwewant();
 }
+
+export = {};
