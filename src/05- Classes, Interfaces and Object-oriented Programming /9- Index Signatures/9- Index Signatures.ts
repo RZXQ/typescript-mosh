@@ -23,7 +23,7 @@
 // console.log(person.name); // Output: "a"
 
 // -----------------------------------------------------------------------
-//     B. TypeScript Dynamic Property Assignment with Index Signature
+//    B. TypeScript Dynamic Property Assignment: Class with Index Signature
 // -----------------------------------------------------------------------
 
 class SeatAssignment {
@@ -40,5 +40,17 @@ seatAssignment["A1"] = "Reacher";
 seatAssignment.A2 = "Mosh";
 
 console.log(seatAssignment);
+
+// -----------------------------------------------------------------------
+//   C. TypeScript Dynamic Property Assignment: Object Literal with Index Signature
+// -----------------------------------------------------------------------
+
+const person: { [key: string]: any } = {};
+
+// Assigning properties dynamically using dot notation.
+person.name = "Reacher"; // ✅ Allowed explicitly because of index signature
+person.age = 25; // ✅ Allowed too
+
+console.log(person);
 
 export = {};
