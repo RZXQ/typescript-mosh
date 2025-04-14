@@ -1,42 +1,37 @@
-// // ===========================================================
-// //                  Constructor Parameter Properties
-// // ===========================================================
-//
-// // 1. TypeScript allows defining properties directly in the constructor.
-// //    - Instead of declaring properties separately, we add access modifiers in the constructor parameters.
-// //    - This eliminates redundancy while keeping the code cleaner and more readable.
-//
-// class Account {
-//   // Optional property (not initialized in the constructor)
-//   nickname?: string;
-//
-//   constructor(
-//     public readonly id: number, // Readonly property (cannot be reassigned after initialization)
-//     public owner: string, // Public property (accessible from anywhere)
-//     private _balance: number, // Private property (encapsulated within the class)
-//     nickname?: string, // Optional parameter (assigned manually inside constructor)
-//   ) {
-//     this.nickname = nickname; // Explicit assignment for optional property
-//   }
-//
-//   // ===========================================================
-//   //                      Methods
-//   // ===========================================================
-//
-//   deposit(amount: number): void {
-//     if (amount <= 0) throw new Error("Invalid amount");
-//     this._balance += amount;
-//   }
-//
-//   getBalance(): number {
-//     return this._balance;
-//   }
-// }
-//
-// // ===========================================================
-// //                        Usage Example
-// // ===========================================================
-//
-// const account = new Account(1, "Reacher", 0, "R");
-//
-// console.log(account);
+/*
+ Parameter Properties:
+
+ "Parameter Properties" is a TypeScript feature allowing automatic creation and
+ initialization of class properties by adding modifiers directly inside the constructor.
+
+ You can use two types of modifiers with parameter properties:
+
+ 1. Access modifiers:
+    - public
+    - private
+    - protected
+
+ 2. Property modifier:
+    - readonly
+
+ Important rule:
+ Adding any of these modifiers (public, private, protected, or readonly) before a
+ constructor parameter automatically converts it into a class property initialized
+ with the parameter's value.
+
+ Example:
+ - "readonly id: number" is equivalent to "public readonly id: number".
+*/
+class Account {
+  constructor(
+    readonly id: number, // equivalent to public readonly id: number
+    public owner: string,
+    private _balance: number,
+    public nickname?: string,
+  ) {}
+}
+
+const account = new Account(10, "ruizhi", 100, "Reacher");
+console.log(account);
+
+export = {};
