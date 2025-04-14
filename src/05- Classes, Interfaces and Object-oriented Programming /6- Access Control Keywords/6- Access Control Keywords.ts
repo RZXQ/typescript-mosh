@@ -1,6 +1,15 @@
-// ===========================================================
-//                        Access Modifiers
-// ===========================================================
+// ==========================================================================================
+//                                  Access Modifiers
+//
+// TypeScript's private Modifier Doesn't Affect JavaScript Runtime
+//
+// In TypeScript, the access modifiers private, public, and protected are only enforced during
+// compile-time. They help developers write better code by alerting them about improper usage
+// at compile-time through error messages.
+//
+// At runtime (in regular JavaScript), these modifiers don't restrict access to properties.
+// After compilation, fields declared as private are accessible directly at runtime.
+// ==========================================================================================
 
 // 1. Three Access Modifiers in TypeScript:
 //    - public    → Accessible anywhere (default).
