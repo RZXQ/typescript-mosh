@@ -1,31 +1,44 @@
 // ===========================================================
+//            Why Is It Called an "Index Signature"?
+//
+// An "Index Signature" explicitly tells TypeScript what type of properties
+// an object can have, allowing dynamic creation and access of properties.
+// "Index" refers to accessing object properties using keys within brackets,
+// and "signature" specifies the allowed types of these keys and their values.
+// ===========================================================
 //                Dynamic Property Assignment
-// Note:
-// TypeScript doesn't allow adding properties dynamically as JavaScript does.
-// To achieve similar functionality, we use an index signature.
+//
+// Clarification:
+// TypeScript typically requires properties to be explicitly defined.
+// However, being a superset of JavaScript, TypeScript can also allow
+// dynamic properties via an "Index Signature".
 // ===========================================================
 
 // -----------------------------------------------------------------------
 //              A. JavaScript Dynamic Property Addition
 // -----------------------------------------------------------------------
-// Example (for understanding; not used in TypeScript):
+// Example (for information only; demonstrates JavaScript behavior):
 // let person = {};
 // person.name = "a";
-// console.log(person.name);
+// console.log(person.name); // Output: "a"
 
 // -----------------------------------------------------------------------
-//       B. TypeScript Dynamic Property Assignment via Index Signature
+//     B. TypeScript Dynamic Property Assignment with Index Signature
 // -----------------------------------------------------------------------
 
 class SeatAssignment {
-  // Index signature: allows dynamic properties where keys and values are strings.
+  // "Index Signature":
+  // Allows defining dynamic properties explicitly.
+  // Keys and values are both explicitly typed as strings.
   [seatNumber: string]: string;
 }
 
-let seatAssignments = new SeatAssignment();
+let seatAssignment = new SeatAssignment();
 
-// Assign seat occupants using both bracket and dot notation.
-seatAssignments["A1"] = "Reacher";
-seatAssignments.A2 = "Mosh";
+// Assign seat occupants using both bracket- and dot-notation.
+seatAssignment["A1"] = "Reacher";
+seatAssignment.A2 = "Mosh";
 
-console.log(seatAssignments);
+console.log(seatAssignment);
+
+export = {};
