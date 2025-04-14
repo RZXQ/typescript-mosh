@@ -1,10 +1,17 @@
 /*
  Parameter Properties:
 
- "Parameter Properties" is a TypeScript feature allowing automatic creation and
- initialization of class properties by adding modifiers directly inside the constructor.
+ The term "Parameter Property" specifically refers to a constructor parameter in
+ TypeScript that automatically becomes a class property.
 
- You can use two types of modifiers with parameter properties:
+ In simple terms, Parameter Properties are:
+   - Initially constructor parameters.
+   - Automatically converted into class properties by adding modifiers.
+
+ This TypeScript feature allows you to create and initialize class properties by simply
+ placing modifiers directly before parameters in the constructor.
+
+ Two types of modifiers are permitted with parameter properties:
 
  1. Access modifiers:
     - public
@@ -15,12 +22,13 @@
     - readonly
 
  Important rule:
- Adding any of these modifiers (public, private, protected, or readonly) before a
- constructor parameter automatically converts it into a class property initialized
- with the parameter's value.
+ Placing any of these modifiers (public, private, protected, or readonly) before a
+ constructor parameter automatically turns it into a class property initialized
+ directly with the parameter's value.
 
  Example:
- - "readonly id: number" is equivalent to "public readonly id: number".
+ The parameter "readonly id: number" is implicitly public and equivalent to explicitly
+ writing "public readonly id: number".
 */
 class Account {
   constructor(
