@@ -1,69 +1,75 @@
-// // ===========================================================
-// //                      Abstract Class Example
-// // ===========================================================
-// // Note: Use abstract class to share logic with subclasses
-// // abstract class Calendar {
-// //     constructor(public name: string) {}
-// //
-// //     abstract addEvent(): void;
-// //     abstract removeEvent(): void;
-// // }
+// ===========================================================
+//                      Abstract Class Example
+// ===========================================================
+// Note: This is an alternative approach to interfaces
+// Using abstract class allows sharing logic with subclasses
 //
-// // ===========================================================
-// //                      Interface Definition
-// // ===========================================================
-// // Interface: Defines object shape; more concise than abstract class
-// interface Calendar {
-//   name: string;
-//   addEvent(): void;
-//   removeEvent(): void;
+// abstract class Calendar {
+//     constructor(public name: string) {}
+//
+//     abstract addEvent(): void;
+//     abstract removeEvent(): void;
 // }
-//
-// // ===========================================================
-// //                      Extended Interface
-// // ===========================================================
-// // Extends: Adds new method to the base interface
-// interface CloudCalendar extends Calendar {
-//   sync(): void;
-// }
-//
-// // ===========================================================
-// //                      Concrete Implementation
-// // ===========================================================
-// // Class: Implements the interface with actual logic
-// class GoogleCalendar implements Calendar {
-//   constructor(public name: string) {}
-//
-//   addEvent(): void {
-//     console.log("addEvent in GoogleCalendar");
-//   }
-//
-//   removeEvent(): void {
-//     console.log("removeEvent in GoogleCalendar");
-//   }
-// }
-//
-// // ===========================================================
-// //                      When to Use Interface vs Abstract Class
-// // ===========================================================
-// /*
-// When to Use an Interface:
-// - Use when you only need to define a contract (shape) for objects, like properties and method signatures, without any implementation.
-// - Ideal for loose coupling: classes can implement multiple interfaces, making it flexible (e.g., a class could implement Calendar and another unrelated interface).
-// - Perfect for scenarios where different classes need to share a structure but not behavior (e.g., Calendar as a blueprint for GoogleCalendar, iCal, etc.).
-// - Example: Use Calendar interface if GoogleCalendar and OutlookCalendar have totally different ways of adding events but must expose the same methods.
-//
-// When to Use an Abstract Class:
-// - Use when you want to share common logic (methods with code) across subclasses, alongside a blueprint.
-// - Good for tighter coupling within a hierarchy: subclasses inherit both structure and behavior (e.g., a default addEvent() logic that subclasses can tweak).
-// - Suited for cases where you have a family of related classes with shared functionality (e.g., a Calendar abstract class with a method to log event changes that all subclasses use).
-// - Example: Use abstract Calendar if all calendars should share a method to validate event dates before adding them.
-//
-// Key Differences:
-// - Interfaces: No implementation, multiple inheritance possible, more flexible.
-// - Abstract Classes: Can include implementation, single inheritance only, more rigid but reusable.
-//
-// Choose Based on Needs:
-// - Need just structure? Go with interface.
-// - Need structure + shared code? Go with abstract class.
-// */
+
+// ===========================================================
+//                      Interface Definition
+// ===========================================================
+// Interface: Defines object shape without implementation
+// Note: Interfaces don't generate JavaScript code when compiled
+interface Calendar {
+  name: string;
+  addEvent(): void;
+  removeEvent(): void;
+}
+
+// ===========================================================
+//                      Extended Interface
+// ===========================================================
+// Extends: Adds new method to the base interface
+interface CloudCalendar extends Calendar {
+  sync(): void;
+}
+
+// ===========================================================
+//                      Concrete Implementation
+// ===========================================================
+// Class: Implements the interface with actual logic
+class GoogleCalendar implements Calendar {
+  constructor(public name: string) {}
+
+  addEvent(): void {
+    console.log("addEvent in GoogleCalendar");
+  }
+
+  removeEvent(): void {
+    console.log("removeEvent in GoogleCalendar");
+  }
+}
+
+// ===========================================================
+//                      When to Use Interface vs Abstract Class
+// ===========================================================
+/*
+When to Use an Interface:
+- For defining contracts (shape) without implementation
+- When you need loose coupling (a class can implement multiple interfaces)
+- When different classes need the same structure but different behaviors
+- Example: Calendar interface for GoogleCalendar and OutlookCalendar with
+  different event-handling implementations
+
+When to Use an Abstract Class:
+- When you need to share common code/logic across subclasses
+- For tighter coupling within a related class hierarchy
+- When subclasses should inherit both structure and behavior
+- Example: Use if all calendars need a shared validation method
+
+Key Differences:
+- Interfaces: No implementation, multiple inheritance, more flexible
+- Abstract Classes: Can include implementation, single inheritance, more reusable
+
+Decision Guide:
+- Need just structure? → Interface
+- Need structure + shared code? → Abstract class
+*/
+
+export = {};
