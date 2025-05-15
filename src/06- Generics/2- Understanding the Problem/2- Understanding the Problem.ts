@@ -33,3 +33,5 @@ let pair2 = new StringKeyValuePair("1", "Apple");
 // - Provide flexibility for any key/value type (e.g., number, string, boolean, custom objects) without creating new classes.
 // - Ensure type safety and maintain IDE IntelliSense for each instance, unlike 'any' or union types.
 // - Scale easily as project needs grow, reducing maintenance overhead for similar classes.
+
+export = {};
