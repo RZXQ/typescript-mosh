@@ -1,8 +1,7 @@
 // ===========================================================
 //                      Generic KeyValuePair Class
 // ===========================================================
-// Note: T (Template), K (Key), V (Value), U (Utility) are common generic type parameter names
-// K and V are used here for key-value pairs, enhancing readability
+// Note: T (Type), K (Key), V (Value), U (Utility) are common generic type parameter names
 class KeyValuePair<K, V> {
   constructor(
     public key: K,
