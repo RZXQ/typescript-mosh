@@ -32,7 +32,7 @@
 */
 class Account {
   constructor(
-    readonly id: number, // equivalent to public readonly id: number
+    public readonly id: number, // equivalent to readonly id: number
     public owner: string,
     private _balance: number,
     public nickname?: string,
