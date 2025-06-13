@@ -28,3 +28,5 @@ class ProductStore extends Store<Product> {
     return [];
   }
 }
+
+export = {};
