@@ -11,18 +11,22 @@ class Store<T> {
   }
 }
 
-// A. Simply pass on the generic type parameter from parent to child
+// A. Pass through the generic type parameter unchanged from parent to child
+// The child class accepts any type T and forwards it to the parent Store<T>
 class CompressibleStore<T> extends Store<T> {
   compress() {}
 }
 
-// B.or we can Restrict the generic type parameter
+// B. Constrain the generic type parameter with additional requirements
+// T must have at least a 'name' property of type string to satisfy the constraint
 class SearchableStore<T extends { name: string }> extends Store<T> {
   find(name: string): T | undefined {
     return this._objects.find((obj) => obj.name === name);
   }
 }
 
+// C. Specialize the generic type by fixing it to a concrete type
+// No generic parameter needed - this store only works with Product objects
 class ProductStore extends Store<Product> {
   filterByCategory(category: string): Product[] {
     return [];
