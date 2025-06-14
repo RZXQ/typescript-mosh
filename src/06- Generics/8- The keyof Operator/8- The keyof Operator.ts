@@ -22,3 +22,5 @@ store.add({ name: "a", price: 1 });
 store.find("name", "a");
 store.find("price", 1);
 // store.find("nonExistingProperty", 1);
+
+export = {};
