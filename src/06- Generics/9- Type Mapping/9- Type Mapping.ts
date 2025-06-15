@@ -1,4 +1,4 @@
-// 1. Specific type mapping - creates a readonly version of a specific interface
+// 1. Specific mapped type - creates a readonly version of Product interface
 interface Product {
   name: string;
   price: number;
@@ -13,7 +13,9 @@ let product: ReadOnlyProduct = {
   price: 1,
 };
 
-// 2. Generic type mapping - creates a reusable readonly utility type
+// 2. Generic mapped types - reusable utility types for type transformations
+
+// A. Readonly mapped type - makes all properties readonly
 type ReadOnly<T> = {
   readonly [K in keyof T]: T[K];
 };
@@ -24,18 +26,18 @@ interface Customer {
 }
 
 const customer: ReadOnly<Customer> = {
-  // This creates a readonly version of the Customer interface
   name: "ab",
   price: 10,
 };
 
-// 3. Optional type mapping and nullable type mapping
+// B. Optional mapped type - makes all properties optional
 type Optional<T> = {
-  [K in keyof T]?: T[K]; // Makes all properties optional
+  [K in keyof T]?: T[K];
 };
 
+// C. Nullable mapped type - allows all properties to be null
 type Nullable<T> = {
-  [K in keyof T]: T[K] | null; // Makes all properties nullable (can be original type or null)
+  [K in keyof T]: T[K] | null;
 };
 
 export = {};
