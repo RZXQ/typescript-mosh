@@ -12,3 +12,5 @@ function Component(value: number) {
 // Follows the Factory Pattern - reusable and configurable.
 @Component(10)
 class ProfileComponent {}
+
+export = {};
