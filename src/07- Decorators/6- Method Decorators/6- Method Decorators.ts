@@ -91,3 +91,5 @@ person.say("Hello");
 // Before
 // Person says Hello
 // After
+
+export = {};
