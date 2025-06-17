@@ -1,8 +1,8 @@
 // TypeScript Module System Explanation:
 
 // 1. You write ES6 module syntax (modern way):
-import { readFile } from "fs";
-import express from "express";
+// import { readFile } from "fs";
+// import express from "express";
 // export class MyClass {}
 
 // 2. TypeScript compiles this to CommonJS by default (old way):
